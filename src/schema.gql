@@ -1,0 +1,40 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type taskentity {
+  id: Float!
+  name: String!
+}
+
+type UserEntity {
+  id: Float!
+  username: String!
+  password: String!
+}
+
+type Query {
+  getTask: String!
+}
+
+type Mutation {
+  addTask(CreateInput: CreateTaskDto!): taskentity!
+  updateTask(UpdateInput: updateTask!): taskentity!
+  signUp(params: authcredit!): UserEntity!
+}
+
+input CreateTaskDto {
+  name: String!
+  priority: String!
+}
+
+input updateTask {
+  id: Float
+  name: String!
+  priority: String!
+}
+
+input authcredit {
+  username: String!
+  password: String!
+}
